@@ -11,5 +11,5 @@ public class Variable {
         System.out.println("Boolean : " + z);
         System.out.println("Character : " + symbol);
         System.out.println("Hello " + name);
-    }
+    } 
 }
