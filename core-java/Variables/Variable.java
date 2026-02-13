@@ -86,9 +86,9 @@ public class Variable {
         // 13. Variable Shadowing
         int shadowVar = 100;
         {
-            int shadowVar = 200;          // Different variable (shadows outer)
+            int shadowVar1 = 200;          // Different variable (shadows outer)
             System.out.println("\n=== Variable Shadowing ===");
-            System.out.println("Inner shadowVar: " + shadowVar);
+            System.out.println("Inner shadowVar: " + shadowVar1);
         }
         System.out.println("Outer shadowVar: " + shadowVar);
         
