@@ -1,38 +1,47 @@
-class Student {
-    // private variables (data hiding)
-    private String name;
-    private int age;
+public class Encapsulation {
 
-    // getter method
-    public String getName() {
-        return name;
-    }
+    static class Student {
+        private String name;
+        private int age;
+        private long phone;
 
-    // setter method
-    public void setName(String name) {
-        this.name = name;
-    }
+        Student(String name, int age, long phone) {
+            this.name = name;
+            this.age = age;
+            this.phone = phone;
+        }
 
-    // getter method
-    public int getAge() {
-        return age;
-    }
+        public void setName(String name) {
+            this.name = name;
+        }
 
-    // setter method with validation
-    public void setAge(int age) {
-        if(age > 0) {
+        public void setAge(int age) {
             this.age = age;
         }
+
+        public void setPhone(long phone) {
+            this.phone = phone;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+        public long getPhone() {
+            return phone;
+        }
     }
-}
 
-public class Encapsulation {
     public static void main(String[] args) {
-        Student s = new Student();
-        s.setName("Anees");
-        s.setAge(21);
+        Student student = new Student("Anees", 22, 123456789);
 
-        System.out.println(s.getName());
-        System.out.println(s.getAge());
+        System.out.println(student.getName());
+        System.out.println(student.getAge());
+        System.out.println(student.getPhone());
+
     }
 }
