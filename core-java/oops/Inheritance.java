@@ -49,6 +49,6 @@ public class Inheritance {
         Animal animal = new Dog();
         animal.eat();    // Animal method
         animal.sound();  // Dog method (runtime polymorphism)
-        // animal.bark(); ❌ not accessible
+        // animal.bark();  not accessible
     }
 }
