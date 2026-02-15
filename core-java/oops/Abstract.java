@@ -1,5 +1,5 @@
 abstract class Laptop {
-    abstract void turnOff();
+    abstract void turnOff(); // declaration
 
     void turnOn() {
         System.out.println("Turnning ON");
@@ -12,13 +12,13 @@ class Asus extends Laptop {
         System.out.println("This is from asus");
     }
 
-    public void turnOff() {
+    public void turnOff() { // defenition
         System.out.println("Asus laptop turnning Off");
     }
 }
 
 class Victor extends Laptop {
-    public void turnOff() {
+    public void turnOff() { // defenition
         System.out.println("Victor laptop turnning Off");
     }
 }
