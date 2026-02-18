@@ -1,19 +1,22 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class ExceptionalHandling {
     public static void main(String[] args) {
 
-        try {
-            // Risky code (may cause exception)
-            System.out.println(1 / 0);
-        } 
-        catch (ArithmeticException e) {
-            // Handling the exception
-            System.out.println(e);
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter a number: ");
+            int number = scanner.nextInt();
+            System.out.println(number);
+        } catch (InputMismatchException e) {
+            System.out.println("That wasn't a number!");
+        } catch (ArithmeticException e) {
+            System.out.println("YOU CAN'T DIVIDE BY ZERO!");
+        } catch (Exception e) {
+            // SAFETY NET
+            System.out.println("Something went wrong");
+        } finally {
+            System.out.println("This always executes");
         }
-        finally{
-            System.out.println("Finally code executes anyways ... ");
-        }
-
-        // Program continues normally
-        System.out.println("Program ended safely");
     }
 }
